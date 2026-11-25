@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rasa Rush: Dapur Kilat</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: #2e2118;
+    min-height: 100%;
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+  }
+  #wrap {
+    width: min(1280px, 100%);
+  }
+  canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.55);
+    background: #f7ead6;
+  }
+  #below {
+    color: #e8d9bd;
+    font-size: 13px;
+    text-align: center;
+    padding: 10px 4px 0;
+    line-height: 1.5;
+  }
+  #below b { color: #ffd94d; }
+</style>
+</head>
+<body>
+  <div id="wrap">
+    <canvas id="game" width="1280" height="720"></canvas>
+    <div id="below">
+      <b>Rasa Rush: Dapur Kilat</b> — masak, rakit, sajikan sebelum pelanggan kehilangan sabar.
+      WASD / panah untuk jalan, <b>E</b> atau klik untuk memakai stasiun, <b>P</b> jeda, <b>M</b> bisu, <b>R</b> ulang.
+      Semua gambar dan suara dibuat oleh game ini sendiri; tidak ada unduhan dari internet.
+    </div>
+  </div>
+  <script type="module">
+    import { startGame } from './src/main.js';
+    startGame();
+  </script>
+</body>
+</html>
